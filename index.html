@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en"  ng-app ="myModul">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" ng-app="myModul">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./angular.min.js"></script>
     <script src="./indexx.js"></script>
     <title>Document</title>
-</head>
-<body ng-controller="myController">
+  </head>
+  <body ng-controller="myController">
     <!-- {{dt | date:"yyyy"}} -->
-   <h2>orderBy clause</h2>
-   <!-- it show the same output -->
-   <!-- orderBy -->
-   <!-- for ascending -->
-   <!-- {{Subject | orderBy}} -->
-   <!-- for descending we used '-' -->
-   <!-- {{Subject | orderBy:'-'}} -->
-   <!-- {{value | orderBy:'-'}} -->
-   <!-- {{subject | orderBy}} -->
-   <!-- Grouping we used directive ng-reapeat -->
- <ol>
+    <!-- <h2>orderBy clause</h2> -->
+    <!-- it show the same output -->
+    <!-- orderBy -->
+    <!-- for ascending -->
+    <!-- {{Subject | orderBy}} -->
+    <!-- for descending we used '-' -->
+    <!-- {{Subject | orderBy:'-'}} -->
+    <!-- {{value | orderBy:'-'}} -->
+    <!-- {{subject | orderBy}} -->
+    <!-- Grouping we used directive ng-reapeat -->
+    <!-- <ol>
      <li ng-repeat="a in subject">{{a}}</li>
  </ol>
 
@@ -56,16 +56,36 @@
     </tr>
 
 
-</table>
+</table> -->
+
+    <table>
+      <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Price</th>
+      </tr>
+
+      <tr ng-repeat = "a in Laptop | orderBy:x ">
+        <td>{{a.Brand}}</td>
+        <td>{{a.Model}}</td>
+        <td>{{a.Price}}</td>
+      </tr>
+    </table>
+
+    <h1>Fields Available</h1>
+    <h2>Brand</h2>
+    <h2>Model</h2>
+    <h2>Price</h2>
+    <h1>Enter any Filed Name:-</h1>
+
+    <input type="text" ng-model="b" />
 
 
+    <select ng-model ="x">
+        <option>Brand</option>
+        <option>Model</option>
+        <option>Price</option>
 
-<!-- {{stu_credentials.email}} -->
-
-
-
-
-
-    
-</body>
+    </select>
+  </body>
 </html>
