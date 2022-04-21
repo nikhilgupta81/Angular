@@ -18,8 +18,53 @@
    <!-- for descending we used '-' -->
    <!-- {{Subject | orderBy:'-'}} -->
    <!-- {{value | orderBy:'-'}} -->
-   {{subject | orderBy}}
+   <!-- {{subject | orderBy}} -->
+   <!-- Grouping we used directive ng-reapeat -->
+ <ol>
+     <li ng-repeat="a in subject">{{a}}</li>
+ </ol>
+
+ <br>
+
+ <h3>Order By clause </h3>
+ <ol>
+    <li ng-repeat="a in subject">{{a | orderBy}}</li>
+</ol>
+<br>
+<h3>Reverse order</h3>
+<ol>
+    <li ng-repeat="a in subject">{{a | orderBy:'-'}}</li>
+</ol>
+<br>
+<h3>can be used expression evaluator.</h3>
+<ol>
+    <li ng-repeat="a in subject | orderBy:'-'">{{ a }} </li>
+</ol>
    
+
+<table>
+    <tr>
+        <th> Id </th>
+        <th>Email</th>
+        <th>Password</th>
+    </tr>
+
+    <tr ng-repeat = " a in stu_credentials | orderBy : 'id' ">
+        <td>{{a.id}}</td>
+        <td>{{a.email}}</td>
+        <td>{{a.pass}} </td>
+    </tr>
+
+
+</table>
+
+
+
+<!-- {{stu_credentials.email}} -->
+
+
+
+
 
     
 </body>
