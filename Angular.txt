@@ -1,0 +1,30 @@
+orderBy ==>
+--used to display data either in ascending order or descending order.
+--can be used with simple value or data or can be used in list item,
+array object.
+
+By default(orderBy) data is diplayed in ascending order.
+'-' reverse order
+can be used expression evaluator.
+can be used with directive(ng-repeat).
+
+
+task==>
+
+laptop:-
+menu
+
+brand
+model
+price
+
+diplay the field name  user
+
+Ask the user to enter any one field 
+enter value 
+pick the value
+on the basis of value use orderBy filter.
+
+
+
+
